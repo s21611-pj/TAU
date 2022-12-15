@@ -1,0 +1,24 @@
+spring:
+  datasource:
+#    url: jdbc:mysql://omdb-db:3306/omdb-db
+    url: jdbc:h2:mem:omdb-db
+    username: root
+    password: haselko
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
+
+
+consts:
+  awardedTypeYes: "YES"
+  awardedTypeTest: "TEST"
+  categoryBestPicture: "Best Picture"
+  omdbApiUrl: "https://www.omdbapi.com/"
+  omdbApiTitleParamName: "t"
+  omdbApiKeyParamName: "apikey"
